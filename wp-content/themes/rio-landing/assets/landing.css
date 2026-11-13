@@ -458,3 +458,10 @@ img{height:auto}
 }
 .hero-img{width:100%}
 .sub{text-wrap:balance}
+/* v9b hero desktop: ảnh bác sĩ lớn, tràn lề phải, cân với khối chữ */
+@media (min-width:1024px){
+  .hero{overflow:hidden;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);column-gap:16px}
+  .hero-img{width:104%;max-width:860px;justify-self:start;margin:0 0 0 -2%}
+}
+@media (min-width:1280px){.hero-img{width:122%}}
+@media (min-width:1440px){.hero-img{width:128%}}
