@@ -480,3 +480,9 @@ main > section{position:relative;isolation:isolate;overflow-x:clip}
 .sec-wm.on-dark{opacity:.08}
 @media (min-width:1024px){.sec-wm{width:720px}.sec-wm.l{--wx:-25%}.sec-wm.r{--wx:25%}}
 @media (prefers-reduced-motion:reduce){.sec-wm{--wm:0px!important;--wr:0deg!important}}
+
+/* v11b: logo chim mo hon de khong phan tam khi doc (13/11) */
+.hero > .hero-wm{opacity:.04}
+@media (min-width:1024px){.hero > .hero-wm{opacity:.035}}
+.sec-wm{opacity:.035}
+.sec-wm.on-dark{opacity:.045}
