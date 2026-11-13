@@ -29,3 +29,5 @@ f.addEventListener('submit',function(e){
 s.addEventListener('scroll',function(){var w=s.children[0].getBoundingClientRect().width+10,k=Math.round(s.scrollLeft/w);[].forEach.call(d.children,function(x,j){x.className=j===k?'on':''})},{passive:true})})})();
 
 (function(){var b=document.getElementById('baMore');if(!b)return;b.addEventListener('click',function(){document.querySelectorAll('.ba-more').forEach(function(e){e.classList.remove('ba-more')});var g=document.querySelector('.ba-grid');if(g)g.classList.remove('ba-collapsed');b.parentNode.remove();});})();
+
+(function(){var w=document.querySelector('.hero-wm');if(!w||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=0;function u(){t=0;var y=Math.min(window.scrollY,1600);w.style.setProperty('--wm',(y*0.35).toFixed(1)+'px');w.style.setProperty('--wr',(y*0.025).toFixed(2)+'deg');w.style.setProperty('--ws',(1+y*0.00015).toFixed(4))}window.addEventListener('scroll',function(){if(!t)t=requestAnimationFrame(u)},{passive:true});u()})();

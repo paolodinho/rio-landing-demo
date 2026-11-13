@@ -465,3 +465,10 @@ img{height:auto}
 }
 @media (min-width:1280px){.hero-img{width:122%}}
 @media (min-width:1440px){.hero-img{width:128%}}
+
+/* v10: logo RiO chim duoi nen hero, troi theo cuon */
+.hero{overflow-x:clip}
+.hero > .hero-wm{position:absolute;z-index:0;left:50%;top:40px;width:min(110vw,560px);height:auto;opacity:.07;pointer-events:none;user-select:none;transform:translate3d(-50%,var(--wm,0px),0) rotate(var(--wr,0deg)) scale(var(--ws,1));will-change:transform}
+.hero > :not(.hero-wm){z-index:1}
+@media (min-width:1024px){.hero > .hero-wm{left:30%;top:-40px;width:760px;opacity:.06}}
+@media (prefers-reduced-motion:reduce){.hero > .hero-wm{transform:translate3d(-50%,0,0)}}
