@@ -472,3 +472,11 @@ img{height:auto}
 .hero > :not(.hero-wm){z-index:1}
 @media (min-width:1024px){.hero > .hero-wm{left:30%;top:-40px;width:760px;opacity:.06}}
 @media (prefers-reduced-motion:reduce){.hero > .hero-wm{transform:translate3d(-50%,0,0)}}
+
+/* v11: logo RiO chim o MOI section (JS chen .sec-wm), nam tren nen, duoi noi dung */
+main > section{position:relative;isolation:isolate;overflow-x:clip}
+.sec-wm{position:absolute;z-index:-1;top:50%;width:min(100vw,620px);height:auto;opacity:.06;pointer-events:none;user-select:none;transform:translate3d(var(--wx,-50%),calc(-50% + var(--wm,0px)),0) rotate(var(--wr,0deg));will-change:transform}
+.sec-wm.l{left:0;--wx:-30%}.sec-wm.r{right:0;left:auto;--wx:30%}
+.sec-wm.on-dark{opacity:.08}
+@media (min-width:1024px){.sec-wm{width:720px}.sec-wm.l{--wx:-25%}.sec-wm.r{--wx:25%}}
+@media (prefers-reduced-motion:reduce){.sec-wm{--wm:0px!important;--wr:0deg!important}}
