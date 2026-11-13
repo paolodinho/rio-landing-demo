@@ -518,3 +518,6 @@ body.no-scroll{overflow:hidden}
 /* v15: thanh tren cung (nut Nhan tu van) bam theo khi cuon: overflow:hidden o .page lam hong sticky (13/11) */
 .page{overflow:visible;overflow-x:clip}
 .top{position:sticky;top:0;z-index:60;box-shadow:0 2px 12px rgba(0,20,80,.18)}
+
+/* v16: anh bao chi giu dung ti le goc, khong cat tren moi thiet bi (13/11) */
+.press-card img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
