@@ -552,3 +552,6 @@ main section{scroll-margin-top:84px}
 .top .pill:hover{background:linear-gradient(180deg,#FFE48A,#FFC233);color:#0A1F5C}
 @keyframes pillGlow{50%{box-shadow:0 0 0 7px rgba(255,216,102,0),0 6px 18px rgba(245,181,33,.45)}}
 @media (prefers-reduced-motion:reduce){.top .pill{animation:none}}
+/* v18: thẻ phương pháp chưa có ảnh */
+.tech-item.no-img{grid-template-columns:1fr!important}
+.tech-item.no-img div{padding:18px 20px!important}
