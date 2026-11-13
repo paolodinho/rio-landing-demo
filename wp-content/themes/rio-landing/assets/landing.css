@@ -521,3 +521,34 @@ body.no-scroll{overflow:hidden}
 
 /* v16: anh bao chi giu dung ti le goc, khong cat tren moi thiet bi (13/11) */
 .press-card img{aspect-ratio:auto 16/10!important;height:auto!important;object-fit:contain!important}
+
+/* v17: header moi + form chi o popup (13/11) */
+.top{border-bottom:2px solid var(--gold-l,#E9C46A)}
+.top .logo{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.top .brand{display:none;border-left:1px solid rgba(255,255,255,.28);padding-left:12px;line-height:1.15}
+.top .brand small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#B9CBF5}
+.top .brand b{display:block;font-family:var(--f-head);font-weight:600;font-size:19px;letter-spacing:.02em;color:#fff;white-space:nowrap}
+.top .pill{background:linear-gradient(180deg,#E8343C,#C1121F);color:#fff;box-shadow:0 4px 14px rgba(193,18,31,.35)}
+.top .pill:hover{background:linear-gradient(180deg,#F04048,#A80F1A);color:#fff}
+.top .pill:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (min-width:600px){.top .brand{display:block}}
+@media (min-width:1024px){
+  .top{min-height:74px;gap:24px}
+  .top .nav{display:none}
+  .top .hot{margin-left:auto}
+  .top .pill{padding:11px 22px;font-size:14px}
+}
+@media (min-width:1240px){
+  .top .nav{display:flex;gap:4px;margin:0 auto}
+  .top .nav a{position:relative;padding:8px 12px;font-size:15px}
+  .top .nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--gold-l,#E9C46A);transform:scaleX(0);transition:transform .2s}
+  .top .nav a:hover::after,.top .nav a:focus-visible::after{transform:scaleX(1)}
+  .top .hot{margin-left:0}
+}
+main section{scroll-margin-top:84px}
+.form-home[hidden]{display:none!important}
+/* v17b: nut Nhan tu van mau vang kim tren nen navy = tuong phan cao nhat (13/11) */
+.top .pill{background:linear-gradient(180deg,#FFD866,#F5B521);color:#0A1F5C;font-weight:800;box-shadow:0 0 0 3px rgba(255,216,102,.25),0 6px 18px rgba(245,181,33,.45);animation:pillGlow 2.4s ease-in-out infinite}
+.top .pill:hover{background:linear-gradient(180deg,#FFE48A,#FFC233);color:#0A1F5C}
+@keyframes pillGlow{50%{box-shadow:0 0 0 7px rgba(255,216,102,0),0 6px 18px rgba(245,181,33,.45)}}
+@media (prefers-reduced-motion:reduce){.top .pill{animation:none}}
