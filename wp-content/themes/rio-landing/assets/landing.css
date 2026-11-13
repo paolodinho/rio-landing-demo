@@ -486,3 +486,26 @@ main > section{position:relative;isolation:isolate;overflow-x:clip}
 @media (min-width:1024px){.hero > .hero-wm{opacity:.035}}
 .sec-wm{opacity:.035}
 .sec-wm.on-dark{opacity:.045}
+
+/* v12: the bao chi xep doc, anh 16:10 hien du, khong cat (13/11) */
+.press-card{display:flex!important;flex-direction:column}
+.press-card img{width:100%;height:auto!important;max-height:none!important;aspect-ratio:16/10!important;object-fit:cover;object-position:center top;border-right:0!important;border-bottom:1px solid var(--line)}
+.press-card span{flex:1;justify-content:flex-start!important}
+@media (min-width:900px){.press-card span{font-size:20px;padding:18px 22px 22px}}
+
+/* v13: lightbox album anh + popup form dat lich (13/11) */
+.gal figure img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:9999;background:rgba(4,14,40,.92);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 16px 24px}
+.lb.on{display:flex}
+.lb img{max-width:min(1100px,100%);max-height:calc(100vh - 140px);object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb p{color:#fff;font-weight:600;margin:14px 0 0;text-align:center}
+.lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer}
+.lb button:hover,.lb button:focus-visible{background:rgba(255,255,255,.3);outline:2px solid #fff}
+.lb .x{top:14px;right:14px}.lb .pv{left:12px;top:50%;transform:translateY(-50%)}.lb .nx{right:12px;top:50%;transform:translateY(-50%)}
+.fm{position:fixed;inset:0;z-index:9998;background:rgba(4,14,40,.7);display:none;align-items:center;justify-content:center;padding:16px;overflow-y:auto}
+.fm.on{display:flex}
+.fm-box{position:relative;width:100%;max-width:520px;margin:auto}
+.fm-box .form{margin:0;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.fm-h{margin:0 0 12px;color:#fff;font-family:var(--f-head);font-size:clamp(22px,5vw,28px);text-align:center;text-transform:uppercase;text-wrap:balance}
+.fm .x{position:absolute;top:-6px;right:-4px;width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:24px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+body.no-scroll{overflow:hidden}
